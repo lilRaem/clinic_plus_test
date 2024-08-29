@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', function () {
 						if (response.status === 'error') {
 							console.error('Ошибка: ' + response.message)
 						} else {
+							console.log('sends')
+
 							document.querySelector('.statusSend').classList.add('statusSucces')
 							document.querySelector('.statusSend').style.opacity = '1'
 							document.querySelector('.statusSend').style.visibility = 'visible'

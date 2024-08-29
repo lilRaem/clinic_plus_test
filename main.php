@@ -33,22 +33,22 @@ $sql = "SELECT * FROM users WHERE name='$name' AND email='$email' AND phone='$ph
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    echo "Форма уже отправлена";
+    echo json_encode('{"status":"Форма успешно отправлена"}');
 } else {
     try{
         $sql = "INSERT INTO users (name, email, phone) VALUES ('$name', '$email', '$phone')";
         if ($conn->query($sql) === TRUE) {
-            echo "Форма успешно отправлена";
+            echo json_encode('{"status":"Форма успешно отправлена"}');
         } else {
-            echo "Ошибка: " . $sql . "<br>" . $conn->error;
+            echo json_encode('{"status":"Ошибка: " '. $sql . "<br>" . $conn->error .'}');
         }
     } catch (Exception $e) {
         $result['status'] = 'error';
         $result['message'] = $e->getMessage();
-        echo "Ошибка: " . $sql . "<br>" . $conn->error;
+        echo json_encode('{"status":"Ошибка: " '. $sql . "<br>" . $conn->error .'}');
     }
 
 }
-echo json_encode($result);
+// echo json_encode($result);
 $conn->close();
 ?>
