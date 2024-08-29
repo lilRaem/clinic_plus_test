@@ -68,8 +68,19 @@
 					/>
 					<span class="formErr formErrPhone"></span>
 				</label>
-				<div id="btn-submit"><p>Отправить</p></div>
+				<div id="btn-submit">Отправить</div>
 			</form>
 		</div>
 	</body>
+	<script>
+		var phoneInput = document.getElementById('phone')
+
+		const maskOptions = {
+			mask: '+{7} (000) 000-00-00',
+			startsWith: '7',
+			lazy: false,
+			placeholderChar: 'O',
+		}
+		const mask = IMask(phoneInput, maskOptions)
+	</script>
 </html>
