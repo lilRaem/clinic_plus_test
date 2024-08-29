@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Document</title>
+
+		<script src="assets/js/libs/jquery.min.js"></script>
+
+		<script src="assets/js/libs/inputmask.min.js"></script>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="assets/styles/reset.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="assets/styles/style.css"
+		/>
+		<script src="assets/js/main.js"></script>
+	</head>
+	<body>
+		<div class="boxForm">
+			<div class="statusSend">Отправлено</div>
+			<form id="form">
+				<label for="name">
+					<input
+						id="name"
+						name="name"
+						type="text"
+						placeholder="Имя"
+					/>
+					<span class="formErr formErrName"></span>
+				</label>
+
+				<label for="email">
+					<input
+						id="email"
+						name="email"
+						type="email"
+						placeholder="Email"
+					/>
+					<span class="formErr formErrEmail"></span>
+				</label>
+
+				<label for="phone">
+					<input
+						id="phone"
+						name="phone"
+						type="text"
+						placeholder="+7 (OOO) OOO-OO-OO"
+						placeholder="Телефон"
+					/>
+					<span class="formErr formErrPhone"></span>
+				</label>
+				<div id="btn-submit"><p>Отправить</p></div>
+			</form>
+		</div>
+	</body>
+</html>
